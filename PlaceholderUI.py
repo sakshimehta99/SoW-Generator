@@ -320,7 +320,7 @@ if excel_file:
         st.session_state.phase_mapping = phase_mapping
         
         st.markdown('<p class="section-header">3️⃣ Placeholder Mappings</p>', unsafe_allow_html=True)
-        st.success(f"✅ Loaded {len(replacements)} placeholders from Excel file")
+        st.success(f"Loaded {len(replacements)} placeholders from Excel file")
         
         # Display mappings in expandable section
         with st.expander("📋 View All Placeholder Mappings", expanded=False):
@@ -408,9 +408,9 @@ with st.expander("ℹ️ How to Use This Tool", expanded=False):
     Dates are automatically formatted as `DD-MMM-YY` (e.g., 13-Aug-25)
     """)
 
-# Footer
-st.markdown("---")
-st.markdown(
-    "<p style='text-align: center; color: #7f8c8d;'>Made with ❤️ for easier SOW generation</p>",
-    unsafe_allow_html=True
-)
+# # Footer
+# st.markdown("---")
+# st.markdown(
+#     "<p style='text-align: center; color: #7f8c8d;'>Made with ❤️ for easier SOW generation</p>",
+#     unsafe_allow_html=True
+# )
