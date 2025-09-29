@@ -45,7 +45,7 @@ def main():
                     st.session_state.generator = generator
                     st.session_state.excel_uploaded = True
                 
-                st.success("✅ Excel file processed successfully!")
+                # st.success("✅ Excel file processed successfully!")
                 
                 # Display mapping preview
                 st.subheader("📋 Placeholder Mapping Preview")
@@ -83,12 +83,12 @@ def main():
         
         if word_file is not None:
             st.session_state.word_uploaded = True
-            st.success("✅ Word template uploaded successfully!")
+            # st.success("✅ Word template uploaded successfully!")
     
     # Generate SOW section
     if st.session_state.excel_uploaded and st.session_state.word_uploaded:
         st.markdown("---")
-        st.subheader("🚀 Generate Statement of Work")
+        st.subheader(" Generate Statement of Work")
         
         col1, col2 = st.columns([1, 1])
         
@@ -122,7 +122,7 @@ def main():
                         st.session_state.preview_content = preview_content
                 
                 except Exception as e:
-                    st.error(f"❌ Error generating preview: {str(e)}")
+                    st.error(f"Error generating preview: {str(e)}")
         
         with col2:
             client_name = st.session_state.replacements.get('{CLIENT NAME}', 'Unknown_Client')
@@ -166,7 +166,7 @@ def main():
                     # st.success(f"✅ SOW generated successfully! Click the download button above to save '{output_filename}'")
 
                 except Exception as e:
-                    st.error(f"❌ Error generating SOW: {str(e)}")            
+                    st.error(f" Error generating SOW: {str(e)}")            
                 
             
     
